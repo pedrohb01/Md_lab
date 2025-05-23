@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <title>{% block title %}MedinaLab{% endblock %}</title>
+
+    <!-- Estilos globais -->
+    <link rel="stylesheet" href="{% static 'website/styles.css' %}">
+
+    <!-- Estilos específicos da página -->
+    {% block extra_css %}
+    {% endblock %}
+</head>
+<body>
+    <!-- Logo separada do menu -->
+    <a href="{% url 'home' %}" class="logo">
+        <img src="{% static 'website/images/logo.png' %}" alt="Logo">
+    </a>
+
+    <!-- Menu de Navegação -->
+
+    <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+
+    <nav class="navbar">
+        <a href="{% url 'home' %}">Home</a>
+        <a href="{% url 'research' %}">Research</a>
+        <a href="{% url 'our_team' %}">Our Team</a>
+        <a href="{% url 'publications' %}">Publications</a>
+        <a href="{% url 'awards' %}">Awards</a>
+        <a href="{% url 'join_us' %}">Join Us</a>
+    </nav>
+
+    <!-- Conteúdo da página -->
+    <main>
+        {% block content %}
+        {% endblock %}
+    </main>
+</body>
+
+<script>
+    function toggleMenu() {
+        document.querySelector('.navbar').classList.toggle('active');
+    }
+</script>
+
+</body>
+</html>

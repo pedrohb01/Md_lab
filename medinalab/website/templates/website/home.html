@@ -1,0 +1,32 @@
+{% extends 'website/base.html' %}
+{% load static %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'website/home.css' %}">
+{% endblock %}
+
+{% block title %}Home - MedinaLab{% endblock %}
+
+{% block content %}
+    <main class="layout-container">
+        <!-- Coluna central -->
+        <section class="center-column">
+            <img src="{% static 'website/images/membros.png' %}" alt="Research Team">
+            <h2 class="mission">Mission</h2>
+            <p class="paragraph">
+Our research group is committed to advancing precision oncology through cutting-edge immunotherapy. By integrating clinical insights with experimental research, we aim to identify biomarkers that predict treatment response and to uncover novel targets for therapeutic intervention.
+We investigate a broad range of immunotherapeutic approaches, including immune checkpoint blockade and adoptive cell therapies such as CAR-T and tumor-infiltrating lymphocytes (TILs). Our mission is to enhance treatment precision—helping clinicians match the right therapy to the right patient, while also driving innovation to improve the therapies already in use.
+Rooted in a multidisciplinary environment and closely linked to graduate education, our group fosters collaboration across basic, translational, and clinical research to shape the future of cancer care.            </p>
+        </section>
+
+        <!-- Coluna da direita -->
+        <aside class="right-column">
+            <img src="{% static 'website/images/Tiago.png' %}" alt="Tiago Medina">
+            <h4 class="profile-name">Tiago Medina, PhD</h4>
+            <p>Group Leader – Translational Immune-Oncology</p>
+            <p>Assistant Professor at University of Southern Denmark</p>
+            <p>📧 <a href="mailto:medina@health.sdu.dk">medina@health.sdu.dk</a></p>
+            <p>📄 <a href="http://lattes.cnpq.br/1191348718336874">Lattes</a></p>
+        </aside>
+    </main>
+{% endblock %}

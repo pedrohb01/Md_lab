@@ -1,0 +1,101 @@
+/* Estilos globais */
+body {
+    font-family: 'Kokoro', sans-serif;
+    color: black;
+    margin: 10;
+    padding: 0;
+}
+
+/* Contêiner principal (duas colunas) */
+.layout-container {
+    display: flex;
+    justify-content: center; /* Centraliza as colunas */
+    gap: 30px; /* Espaçamento entre as colunas */
+    width: 85%;
+    margin: auto; /* Centraliza na página */
+}
+
+/* Coluna central */
+.center-column {
+    flex: 2; /* Ocupa mais espaço */
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Alinha os itens à esquerda */
+    width: 100%;
+}
+
+/* Ajuste na imagem dos membros */
+.center-column img {
+    align-self: center; /* Centraliza apenas a imagem */
+    width: 100%;
+    max-width: 634px;
+    height: auto;
+}
+
+/* Missão e texto */
+.mission {
+    font-size: 32px;
+    text-align: left; /* Alinha o título à esquerda */
+    margin-left: 10; /* Remove qualquer alinhamento que empurre para a esquerda demais */
+    margin-top: 10px;
+    margin-bottom: 2px; /* Reduz o espaço abaixo da missão */
+    width: 100%;
+    max-width: 634px; /* Mantém a largura dentro da área da imagem */
+
+}
+
+.paragraph {
+    font-size: 18px;
+    line-height: 26px;
+    text-align: justify;
+    word-wrap: break-word;
+    width: 100%;
+    max-width: 634px;; /* Mantém o texto dentro do espaço da imagem */
+    margin-left: 0;
+}
+
+/* Coluna direita */
+.right-column {
+    flex: 0.6; /* Ocupa menos espaço */
+    display: flex;
+    flex-direction: column; /* Mantém os elementos empilhados */
+    align-items: center; /* Mantém a imagem centralizada */    text-align: left;
+    background-color: #F5F5F5;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+/* Alinhar apenas o texto à esquerda */
+.right-column h4,
+.right-column p,
+.right-column a {
+    text-align: left;
+    width: 100%; /* Garante que o alinhamento seja aplicado corretamente */
+}
+.right-column p {
+    margin-bottom: 10px; /* Diminui o espaço entre os parágrafos */
+}
+
+/* Ajuste na imagem do Tiago */
+.right-column img {
+    width: 100%;
+    max-width: 220px;
+    border-radius: 10px;
+}
+
+/* Estilos do texto */
+.right-column a {
+    text-decoration: underline;
+}
+
+/* Responsividade */
+@media (max-width: 634px) {
+    .layout-container {
+        flex-direction: column; /* Muda as colunas para linha em telas pequenas */
+        align-items: center;
+    }
+
+    .center-column img {
+        max-width: 100%;
+    }
+}
